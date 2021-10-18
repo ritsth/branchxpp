@@ -5,5 +5,5 @@ release: python manage.py migrate --no-input
 web: gunicorn branchxpp.wsgi
 =======
 web: gunicorn branchxpp.wsgi
-web: python manage.py runserver 0.0.0.0:$5000
+web: python manage.py runserver 0.0.0.0:$50
 >>>>>>> 709f4f418717558ee45258a131f327d5367783da
