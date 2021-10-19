@@ -26,13 +26,13 @@ router.register('allPosts',AllPostsViewSet, basename='allPosts')
 
 
 urlpatterns = [
-    path('api/', include(router.urls)),
+    path('/', include(router.urls)),
     path('admin/', admin.site.urls),
     path('auth', obtain_auth_token),
   
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('api/logout/blacklist/', BlacklistTokenUpdateView.as_view(),
+    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('logout/blacklist/', BlacklistTokenUpdateView.as_view(),
          name='blacklist')
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
