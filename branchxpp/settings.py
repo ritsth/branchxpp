@@ -29,7 +29,9 @@ DEBUG=True
 
 ALLOWED_HOSTS = ['*']
 
-
+CORS_ORIGIN_WHITELIST = [
+    "https://branchapp.xyz/"
+]
 
 # Application definition
 
