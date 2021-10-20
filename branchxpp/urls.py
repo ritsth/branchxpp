@@ -26,7 +26,7 @@ router.register('allPosts',AllPostsViewSet, basename='allPosts')
 
 
 urlpatterns = [
-    path('/', include(router.urls)),
+    path('', include(router.urls)),
     path('admin/', admin.site.urls),
     path('auth', obtain_auth_token),
   
