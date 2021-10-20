@@ -27,10 +27,10 @@ SECRET_KEY = 'q%a&4_k0@=8=9dwunj8ki4rbog3gf0s8=g*g%smyo!34k141vl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG=True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*','https://branchappxzy.herokuapp.com']
 
 CORS_ORIGIN_WHITELIST = [
-    "https://branchapp.xyz"
+    "https://branchapp.xyz","https://branchappxzy.herokuapp.com"
 ]
 
 # Application definition
@@ -149,7 +149,7 @@ MEDIA_URL = '/image/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
-STATIC_ROOT='staticfiles'
+STATIC_ROOT= os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/image')
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
