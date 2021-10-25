@@ -187,6 +187,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/image')
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 from datetime import timedelta
+[s3] use-sigv4 = True
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
