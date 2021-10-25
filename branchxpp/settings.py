@@ -178,8 +178,7 @@ django_heroku.settings(locals())
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/image/'
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
