@@ -37,8 +37,6 @@ class AddPlantViewSet(viewsets.ModelViewSet):
     parser_classes = (MultiPartParser, FormParser,JSONParser)
     serializer_class= AddPlantSerializer
     queryset=AddPlant.objects.all()
-    lookup_field = 'user'
-    lookup_url_kwarg = 'user'
 
 class PostsLaterViewSet(viewsets.ModelViewSet):
     parser_classes = (MultiPartParser, FormParser,JSONParser)
