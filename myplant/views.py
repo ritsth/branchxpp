@@ -30,7 +30,7 @@ class ChoiceViewSet(viewsets.ModelViewSet):
     serializer_class = QuestionSerializer
     now=timezone.now()
     later=timezone.now()-datetime.timedelta(days=2)
-    later_later=timezone.now()-datetime.timedelta(days=4)
+    later_later=timezone.now()-datetime.timedelta(days=3)
     queryset=Question.objects.filter(pub_date__range=(later_later,later)).order_by('-pub_date')
 
 class AddPlantViewSet(viewsets.ModelViewSet):
