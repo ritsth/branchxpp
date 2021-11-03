@@ -42,14 +42,14 @@ class PostsLaterViewSet(viewsets.ModelViewSet):
     parser_classes = (MultiPartParser, FormParser,JSONParser)
     serializer_class= PostsSerializer
     later=timezone.now()+datetime.timedelta(hours=6)-datetime.timedelta(days=4)
-    later_later=timezone.now()-datetime.timedelta(days=50)
+    later_later=timezone.now()-datetime.timedelta(days=10)
     queryset=Posts.objects.filter(pub_date__range=(later_later,later)).order_by('-pub_date')
 
 class PostsNowViewSet(viewsets.ModelViewSet):
     parser_classes = (MultiPartParser, FormParser,JSONParser)
     serializer_class=PostsSerializer
     now=timezone.now()+datetime.timedelta(hours=6)
-    later=now-datetime.timedelta(days=5)
+    later=now-datetime.timedelta(days=3)
     queryset=Posts.objects.all().filter(pub_date__range=(later,now)).order_by('-pub_date')
 
 class AllPostsViewSet(viewsets.ModelViewSet):
