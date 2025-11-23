@@ -1,8 +1,3 @@
-
-# branchxpp
-#back-end for my web app https://branchapp.xyz/ (currently down because of payment due)</br>
-#(Django REST API) deployed through heroku
-
 # BranchXPP Backend
 
 Backend service for the Branch social media app, a plant-focused platform helping users track plant care, share updates, and interact with the community. This backend powers the mobile app built with React Native.
