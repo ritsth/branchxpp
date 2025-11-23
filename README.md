@@ -53,6 +53,23 @@ The backend integrates with **AWS S3** for media storage and supports sensor-bas
    python manage.py migrate
    python manage.py runserver
    ```
+## Project Structure
+```bash
+   branchxpp/
+   │
+   ├── branchxpp/ # Main project settings and URLs
+   ├── myplant/ # App with models, serializers, views
+   ├── static/ # Static assets and images
+   │
+   ├── manage.py # Django management script
+   ├── requirements.txt # Dependencies
+   ├── Procfile # Heroku process config
+   ├── runtime.txt # Python version
+   └── db.sqlite3 # Local dev database
+```
+
+
+
 ## Deployment
 The backend was deployed on **Heroku** using:
 - gunicorn  
